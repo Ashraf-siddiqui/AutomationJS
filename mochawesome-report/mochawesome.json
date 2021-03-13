@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-03-13T15:22:44.349Z",
+    "end": "2021-03-13T15:22:56.884Z",
+    "duration": 12535,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "24d98a87-8513-47ef-82e0-dcbb990fa438",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b594b94b-987f-4894-b091-67ec05951e39",
+          "title": "first test case",
+          "fullFile": "D:\\SeleniumUsingJavascript\\Folder6\\test\\test.js",
+          "file": "\\test\\test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"first test case\"",
+              "fullTitle": "first test case \"before each\" hook in \"first test case\"",
+              "timedOut": false,
+              "duration": 1,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "page = new homepage();\n page.driver.manage().window().maximize();\npage.visit('https://www.google.com/');",
+              "err": {},
+              "uuid": "48b9c312-7fbf-4983-b96e-1251b1f84353",
+              "parentUUID": "b594b94b-987f-4894-b091-67ec05951e39",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"first test case\"",
+              "fullTitle": "first test case \"after each\" hook in \"first test case\"",
+              "timedOut": false,
+              "duration": 87,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await page.quit();",
+              "err": {},
+              "uuid": "26b373c1-429a-493d-9189-8b0309b2c979",
+              "parentUUID": "b594b94b-987f-4894-b091-67ec05951e39",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "working with framework",
+              "fullTitle": "first test case working with framework",
+              "timedOut": false,
+              "duration": 6077,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//  page=new Page();\n   await page.search('facebook');\n   await page.clickOnFirstLink();\n  await page.waitforTitle();\n   await page.clickOnFirstLink();\n   let credentials=await page.returnENabledFields();\n   credentials.EmailField.should.be.true;\n   credentials.PasswordField.should.be.true;",
+              "err": {},
+              "uuid": "c314f431-f634-49c9-8797-e29a1f381699",
+              "parentUUID": "b594b94b-987f-4894-b091-67ec05951e39",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "working with framework",
+              "fullTitle": "first test case working with framework",
+              "timedOut": false,
+              "duration": 6290,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await page.search('facebook');\n     await page.clickOnFirstLink();\n    await page.waitforTitle();\n     await page.clickOnFirstLink();\n     let credentials=await page.returnENabledFields();\n     \n     credentials.EmailField.should.be.false;\n     credentials.PasswordField.should.be.false;\n    \n    \n        await page.Onfailure();\n        addContext(this,e);\n        addContext(this,'../img.png');",
+              "err": {
+                "message": "AssertionError: expected true to be false",
+                "estack": "AssertionError: expected true to be false\n    at Context.<anonymous> (test\\test.js:52:39)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)",
+                "diff": "- true\n+ false\n"
+              },
+              "uuid": "4e3696bf-c4e7-4bc7-a2ae-bea9d796e6e9",
+              "parentUUID": "b594b94b-987f-4894-b091-67ec05951e39",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c314f431-f634-49c9-8797-e29a1f381699"
+          ],
+          "failures": [
+            "4e3696bf-c4e7-4bc7-a2ae-bea9d796e6e9"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 12367,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 1000000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 6000000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.3.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "autoOpen": "true"
+      },
+      "version": "5.2.0"
+    }
+  }
+}
